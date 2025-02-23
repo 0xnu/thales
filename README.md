@@ -12,6 +12,14 @@ Follow these steps to set up and execute Thales:
 
 Download the latest version of Thales for your operating system from the [releases page](https://github.com/0xnu/thales/releases).
 
+Add Thales binaries for all OS/architectures to your .gitignore file:
+
+```bash
+# Thales Binaries
+thales_*
+*.zip
+```
+
 2. **Environment Setup**
 
 [Grab an API Key](https://www.merge.dev/blog/anthropic-api-key) from your Anthropic account and set it as an environment variable:
@@ -65,6 +73,14 @@ For Windows:
 
 # Update existing README
 ./thales_windows_amd64.exe --update --lang ja
+```
+
+4. **Finish**
+
+To unset the environment variable you set, you can use the following command:
+
+```bash
+unset ANTHROPIC_API_KEY
 ```
 
 ### License

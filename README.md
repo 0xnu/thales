@@ -130,7 +130,7 @@ This project is licensed under the BSD 3-Clause License - see the [LICENSE](LICE
   author       = {Oketunji, A.F.},
   title        = {Thales},
   year         = 2025,
-  version      = {1.0.2},
+  version      = {1.0.3},
   publisher    = {Finbarrs Oketunji},
   doi          = {10.5281/zenodo.14927495},
   url          = {https://doi.org/10.5281/zenodo.14927495}

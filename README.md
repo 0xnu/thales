@@ -10,9 +10,7 @@ Follow these steps to set up and execute Thales:
 
 1. **Installation**
 
-Download the latest version of Thales for your operating system from the [releases page](https://github.com/0xnu/thales/releases).
-
-Add Thales binaries for all OS/architectures to your .gitignore file:
+Download the latest version of Thales for your operating system from the [releases page](https://github.com/0xnu/thales/releases). Add Thales binaries for all OS/architectures to your .gitignore file:
 
 ```bash
 # Thales Binaries
@@ -94,10 +92,10 @@ This project is licensed under the BSD 3-Clause License - see the [LICENSE](LICE
   author       = {Oketunji, A.F.},
   title        = {Thales},
   year         = 2025,
-  version      = {1.0.0},
+  version      = {1.0.1},
   publisher    = {Finbarrs Oketunji},
-  doi          = {10.5281/zenodo.14913280},
-  url          = {https://doi.org/10.5281/zenodo.14913280}
+  doi          = {10.5281/zenodo.14920955},
+  url          = {https://doi.org/10.5281/zenodo.14920955}
 }
 ```
 

@@ -20,10 +20,22 @@ thales_*
 
 2. **Environment Setup**
 
-[Grab an API Key](https://www.merge.dev/blog/anthropic-api-key) from your Anthropic account and set it as an environment variable:
+Thales supports both Claude and OpenAI. Set up the API key for your preferred LLM:
+
+For Claude (default):
+
+- [Get Claude API Key](https://www.merge.dev/blog/anthropic-api-key) from Anthropic
 
 ```bash
 export ANTHROPIC_API_KEY="enter_your_api_key"
+```
+
+For OpenAI:
+
+- [Get OpenAI API Key](https://www.merge.dev/blog/chatgpt-api-key) from OpenAI platform
+
+```bash
+export OPENAI_API_KEY="enter_your_api_key"
 ```
 
 3. **Usage**
@@ -34,17 +46,17 @@ For MacOS:
 # List all supported languages
 ./thales_darwin_amd64 --list-languages
 
-# Generate a new README in English (default)
-./thales_darwin_amd64 --new
+# Generate a new README using Claude (default)
+./thales_darwin_amd64 --new --llm claude
 
-# Generate in Spanish
-./thales_darwin_amd64 --new --lang es
+# Generate using OpenAI in Spanish
+./thales_darwin_amd64 --new --llm openai --lang es
 
-# Custom output location with German language
-./thales_darwin_amd64 --new --output docs/README.md --lang de
+# Custom output with German language using Claude
+./thales_darwin_amd64 --new --llm claude --output docs/README.md --lang de
 
-# Update existing README in French
-./thales_darwin_amd64 --update --lang fr
+# Update existing README using OpenAI in French
+./thales_darwin_amd64 --update --llm openai --lang fr
 ```
 
 For Linux:
@@ -53,11 +65,11 @@ For Linux:
 # List available languages
 ./thales_linux_amd64 --list-languages
 
-# Generate a new README
-./thales_linux_amd64 --new --lang pt
+# Generate a new README using Claude
+./thales_linux_amd64 --new --llm claude --lang pt
 
-# Update existing README
-./thales_linux_amd64 --update --lang it
+# Update existing README using OpenAI
+./thales_linux_amd64 --update --llm openai --lang it
 ```
 
 For Windows:
@@ -66,19 +78,19 @@ For Windows:
 # View supported languages
 ./thales_windows_amd64.exe --list-languages
 
-# Generate a new README
-./thales_windows_amd64.exe --new --lang zh
+# Generate a new README using OpenAI
+./thales_windows_amd64.exe --new --llm openai --lang zh
 
-# Update existing README
-./thales_windows_amd64.exe --update --lang ja
+# Update existing README using Claude
+./thales_windows_amd64.exe --update --llm claude --lang ja
 ```
 
 4. **Finish**
 
-To unset the environment variable you set, you can use the following command:
+To unset the environment variables you set, you can use the following command:
 
 ```bash
-unset ANTHROPIC_API_KEY
+unset ANTHROPIC_API_KEY && unset OPENAI_API_KEY
 ```
 
 ### License
@@ -92,10 +104,10 @@ This project is licensed under the BSD 3-Clause License - see the [LICENSE](LICE
   author       = {Oketunji, A.F.},
   title        = {Thales},
   year         = 2025,
-  version      = {1.0.1},
+  version      = {1.0.2},
   publisher    = {Finbarrs Oketunji},
-  doi          = {10.5281/zenodo.14920955},
-  url          = {https://doi.org/10.5281/zenodo.14920955}
+  doi          = {10.5281/zenodo.14926342},
+  url          = {https://doi.org/10.5281/zenodo.14926342}
 }
 ```
 

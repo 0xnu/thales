@@ -1,5 +1,33 @@
 # Changelog
 
+## 1.0.3 - 2025-02-25 - @0xnu
+Enhancements:
+* Added code review functionality
+  - Full codebase analysis with '--cb' flag
+  - Single file review with '--sf' flag
+  - Customizable focus areas (security, performance, concurrency, etc.)
+  - Configurable severity levels (low, medium, high)
+  - Custom output directory support with '--review-output'
+
+* Enhanced LLM Integration
+  - Improved accuracy and reliability
+  - Optimized prompts for code analysis
+  - Enhanced response parsing for better accuracy
+
+* Expanded Language Support
+  - Added support for 30+ programming languages
+  - Auto-detection of programming languages
+  - Natural language detection for code comments
+  - Improved multi-language codebase handling
+
+* Code Analysis Features
+  - Security vulnerability detection
+  - Performance bottleneck identification
+  - Concurrency issue analysis
+  - Dead code detection
+  - Corner and edge case identification
+  - Algorithmic efficiency analysis
+
 ## 1.0.2 - 2025-02-25 - @0xnu
 * Added OpenAI integration as alternative LLM option
 * Implemented LLM selection with `--llm` flag (claude|openai)

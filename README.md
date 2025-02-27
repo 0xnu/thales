@@ -12,7 +12,7 @@ Follow these steps to set up and execute Thales:
 
 Download the latest version of Thales for your operating system from the [releases page](https://github.com/0xnu/thales/releases).
 
-Add Thales binaries for all OS/architectures and code review outputs to your .gitignore file:
+Add Thales binaries for all OS/architectures and code review outputs to your `.gitignore` file:
 
 ```bash
 # Thales Binaries
@@ -28,22 +28,27 @@ custom_reviews/
 
 2. **Environment Setup**
 
-Thales supports both Claude and OpenAI. Set up the API key for your preferred LLM:
+Thales supports multiple LLMs. Set up the API key for your preferred model:
 
 For Claude (default):
-
-- [Get Claude API Key](https://www.merge.dev/blog/anthropic-api-key) from Anthropic
-
-```bash
-export ANTHROPIC_API_KEY="enter_your_api_key"
-```
+- Get your API key from [Anthropic's Claude Platform](https://www.merge.dev/blog/anthropic-api-key)
 
 For OpenAI:
+- Get your API key from the [OpenAI Platform Dashboard](https://www.merge.dev/blog/chatgpt-api-key)
 
-- [Get OpenAI API Key](https://www.merge.dev/blog/chatgpt-api-key) from OpenAI platform
+For Grok-2:
+- Get your API key from [xAI's Developer Portal](https://www.merge.dev/blog/grok-api-key)
+
+For Mixtral:
+- Get your API key from the [Mistral AI Platform](https://www.merge.dev/blog/mistral-ai-api-key)
+
+Configure your environment variables with the following command:
 
 ```bash
-export OPENAI_API_KEY="enter_your_api_key"
+export ANTHROPIC_API_KEY="enter_claude_api_key" && \
+export OPENAI_API_KEY="enter_openai_api_key" && \
+export GROK_API_KEY="enter_grok_api_key" && \
+export MIXTRAL_API_KEY="enter_mixtral_api_key"
 ```
 
 3. **Usage**
@@ -51,7 +56,7 @@ export OPENAI_API_KEY="enter_your_api_key"
 For MacOS:
 
 ```bash
-# Documentation tasks
+# Generate documentation
 ./thales_darwin_amd64 --new                          # New README with default settings
 ./thales_darwin_amd64 --update --lang es             # Update README in Spanish
 ./thales_darwin_amd64 --new --output docs/README.md  # Custom output location
@@ -59,6 +64,8 @@ For MacOS:
 # Code review
 ./thales_darwin_amd64 --cb . --llm claude            # Review codebase with Claude
 ./thales_darwin_amd64 --sf main.go --llm openai      # Review file with OpenAI
+./thales_darwin_amd64 --cb . --llm grok2             # Review codebase with Grok-2
+./thales_darwin_amd64 --cb . --llm mixtral           # Review codebase with Mixtral
 ./thales_darwin_amd64 --cb . --llm claude --focus security        # Security review with Claude
 ./thales_darwin_amd64 --cb . --llm openai --focus performance    # Performance review with OpenAI
 ./thales_darwin_amd64 --sf main.go --llm claude --severity high  # High-severity with Claude
@@ -73,7 +80,7 @@ For MacOS:
 For Linux:
 
 ```bash
-# Documentation tasks
+# Documentation generation
 ./thales_linux_amd64 --new                          # New README
 ./thales_linux_amd64 --update --lang pt             # Update in Portuguese
 ./thales_linux_amd64 --new --llm openai --lang it   # Use OpenAI, Italian output
@@ -81,11 +88,13 @@ For Linux:
 # Code review
 ./thales_linux_amd64 --cb . --llm claude            # Full review with Claude
 ./thales_linux_amd64 --sf src/main.go --llm openai  # Single file with OpenAI
+./thales_linux_amd64 --sf main.go --llm grok2       # Single file with Grok-2
+./thales_linux_amd64 --cb . --llm mixtral           # Full review with Mixtral
 ./thales_linux_amd64 --cb . --llm claude --focus security,performance  # Multi-focus with Claude
 ./thales_linux_amd64 --sf lib/utils.go --llm openai --severity high   # Critical with OpenAI
 ./thales_linux_amd64 --cb . --llm claude --review-output custom_reviews  # Custom dir with Claude
 
-# Advanced options
+# Configuration
 ./thales_linux_amd64 --list-languages               # Available languages
 ./thales_linux_amd64 --llm claude                   # Specify LLM
 ```
@@ -95,17 +104,19 @@ For Windows:
 ```bash
 # Documentation tasks
 .\thales_windows_amd64.exe --new                    # Generate README
-.\thales_windows_amd64.exe --update --lang fr       # Update in French
+.\thales_windows_amd64.exe --update --lang zh       # Update in Chinese
 .\thales_windows_amd64.exe --new --output docs\README.md  # Custom location
 
 # Code review
 .\thales_windows_amd64.exe --cb . --llm claude      # Review with Claude
 .\thales_windows_amd64.exe --sf main.go --llm openai # Review with OpenAI
+.\thales_windows_amd64.exe --cb . --llm grok2       # Review with Grok-2
+.\thales_windows_amd64.exe --cb . --llm mixtral     # Review with Mixtral
 .\thales_windows_amd64.exe --cb . --llm claude --focus security  # Security with Claude
 .\thales_windows_amd64.exe --sf app.go --llm openai --severity medium  # Medium+ with OpenAI
 .\thales_windows_amd64.exe --cb . --llm claude --focus all  # Full review with Claude
 
-# Advanced options
+# Settings
 .\thales_windows_amd64.exe --list-languages         # Show languages
 .\thales_windows_amd64.exe --llm openai             # Use OpenAI
 .\thales_windows_amd64.exe --review-output reviews  # Set review output
@@ -116,7 +127,10 @@ For Windows:
 To unset the environment variables you set, you can use the following command:
 
 ```bash
-unset ANTHROPIC_API_KEY && unset OPENAI_API_KEY
+unset ANTHROPIC_API_KEY && \
+unset OPENAI_API_KEY && \
+unset GROK_API_KEY && \
+unset MIXTRAL_API_KEY
 ```
 
 ### License
@@ -130,10 +144,10 @@ This project is licensed under the BSD 3-Clause License - see the [LICENSE](LICE
   author       = {Oketunji, A.F.},
   title        = {Thales},
   year         = 2025,
-  version      = {1.0.3},
+  version      = {1.0.4},
   publisher    = {Finbarrs Oketunji},
-  doi          = {10.5281/zenodo.14927495},
-  url          = {https://doi.org/10.5281/zenodo.14927495}
+  doi          = {10.5281/zenodo.14940382},
+  url          = {https://doi.org/10.5281/zenodo.14940382}
 }
 ```
 

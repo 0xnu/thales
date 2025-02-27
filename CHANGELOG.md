@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.0.4 - 2025-02-27 - @0xnu
+Enhancements:
+* Expanded LLM Support
+  - Added Grok-2 integration with '--llm grok2' flag
+  - Added Mixtral integration with '--llm mixtral' flag
+  - Improved response handling and error recovery
+  - Enhanced multi-model compatibility
+
+* Enhanced Security Features
+  - Advanced vulnerability detection and analysis
+  - Improved security-focused code reviews
+  - Real-time security pattern recognition
+  - Detailed dependency scanning
+
 ## 1.0.3 - 2025-02-25 - @0xnu
 Enhancements:
 * Added code review functionality

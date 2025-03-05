@@ -75,6 +75,10 @@ For MacOS:
 ./thales_darwin_amd64 --list-languages               # List supported languages
 ./thales_darwin_amd64 --llm openai                   # Use OpenAI instead of Claude
 ./thales_darwin_amd64 --review-output reports        # Custom review output directory
+./thales_darwin_amd64 --cb . --pdf                   # Review codebase with PDF output
+./thales_darwin_amd64 --sf main.go --pdf             # Review single file with PDF output
+./thales_darwin_amd64 --cb . --html                  # Review codebase with HTML output
+./thales_darwin_amd64 --sf main.go --html            # Review single file with HTML output
 ```
 
 For Linux:
@@ -97,6 +101,10 @@ For Linux:
 # Configuration
 ./thales_linux_amd64 --list-languages               # Available languages
 ./thales_linux_amd64 --llm claude                   # Specify LLM
+./thales_linux_amd64 --cb . --pdf                   # Review codebase with PDF output
+./thales_linux_amd64 --sf main.go --pdf             # Review single file with PDF output
+./thales_linux_amd64 --cb . --html                  # Review codebase with HTML output
+./thales_linux_amd64 --sf main.go --html            # Review single file with HTML output
 ```
 
 For Windows:
@@ -120,6 +128,10 @@ For Windows:
 .\thales_windows_amd64.exe --list-languages         # Show languages
 .\thales_windows_amd64.exe --llm openai             # Use OpenAI
 .\thales_windows_amd64.exe --review-output reviews  # Set review output
+.\thales_windows_amd64.exe --cb . --pdf             # Review codebase with PDF output
+.\thales_windows_amd64.exe --sf main.go --pdf       # Review single file with PDF output
+.\thales_windows_amd64.exe --cb . --html            # Review codebase with HTML output
+.\thales_windows_amd64.exe --sf main.go --html      # Review single file with HTML output
 ```
 
 4. **Finish**
@@ -144,13 +156,15 @@ This project is licensed under the BSD 3-Clause License - see the [LICENSE](LICE
   author       = {Oketunji, A.F.},
   title        = {Thales},
   year         = 2025,
-  version      = {1.0.4},
+  version      = {1.0.5},
   publisher    = {Finbarrs Oketunji},
-  doi          = {10.5281/zenodo.14940382},
-  url          = {https://doi.org/10.5281/zenodo.14940382}
+  doi          = {10.5281/zenodo.14977030},
+  url          = {https://doi.org/10.5281/zenodo.14977030}
 }
 ```
 
 ### Copyright
 
 (c) 2025 Finbarrs Oketunji. All Rights Reserved.
+
+> Thanks for all the emails! It is named after [Thales of Miletus](https://en.wikipedia.org/wiki/Thales_of_Miletus).

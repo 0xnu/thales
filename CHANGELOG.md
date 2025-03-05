@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.5 - 2025-03-05 - @0xnu
+New Features:
+* Document Export Capabilities for Code Reviews
+  - Added PDF export with '--pdf' flag
+  - Added HTML export with '--html' flag
+  - Improved formatting and styling of exported files
+
 ## 1.0.4 - 2025-02-27 - @0xnu
 Enhancements:
 * Expanded LLM Support

@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.6 - 2025-03-07 - @0xnu
+Refinements:
+* Code scanning improvements
+* Bug fixes
+
 ## 1.0.5 - 2025-03-05 - @0xnu
 New Features:
 * Document Export Capabilities for Code Reviews

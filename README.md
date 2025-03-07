@@ -56,7 +56,7 @@ export MIXTRAL_API_KEY="enter_mixtral_api_key"
 For MacOS:
 
 ```bash
-# Generate documentation
+# Documentation tasks
 ./thales_darwin_amd64 --new                          # New README with default settings
 ./thales_darwin_amd64 --update --lang es             # Update README in Spanish
 ./thales_darwin_amd64 --new --output docs/README.md  # Custom output location
@@ -84,7 +84,7 @@ For MacOS:
 For Linux:
 
 ```bash
-# Documentation generation
+# Documentation tasks
 ./thales_linux_amd64 --new                          # New README
 ./thales_linux_amd64 --update --lang pt             # Update in Portuguese
 ./thales_linux_amd64 --new --llm openai --lang it   # Use OpenAI, Italian output
@@ -98,7 +98,7 @@ For Linux:
 ./thales_linux_amd64 --sf lib/utils.go --llm openai --severity high   # Critical with OpenAI
 ./thales_linux_amd64 --cb . --llm claude --review-output custom_reviews  # Custom dir with Claude
 
-# Configuration
+# Advanced options
 ./thales_linux_amd64 --list-languages               # Available languages
 ./thales_linux_amd64 --llm claude                   # Specify LLM
 ./thales_linux_amd64 --cb . --pdf                   # Review codebase with PDF output
@@ -124,7 +124,7 @@ For Windows:
 .\thales_windows_amd64.exe --sf app.go --llm openai --severity medium  # Medium+ with OpenAI
 .\thales_windows_amd64.exe --cb . --llm claude --focus all  # Full review with Claude
 
-# Settings
+# Advanced options
 .\thales_windows_amd64.exe --list-languages         # Show languages
 .\thales_windows_amd64.exe --llm openai             # Use OpenAI
 .\thales_windows_amd64.exe --review-output reviews  # Set review output
@@ -156,10 +156,10 @@ This project is licensed under the BSD 3-Clause License - see the [LICENSE](LICE
   author       = {Oketunji, A.F.},
   title        = {Thales},
   year         = 2025,
-  version      = {1.0.5},
+  version      = {1.0.6},
   publisher    = {Finbarrs Oketunji},
-  doi          = {10.5281/zenodo.14977030},
-  url          = {https://doi.org/10.5281/zenodo.14977030}
+  doi          = {10.5281/zenodo.14991486},
+  url          = {https://doi.org/10.5281/zenodo.14991486}
 }
 ```
 

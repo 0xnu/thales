@@ -1,5 +1,21 @@
 # Changelog
 
+## 1.0.7 - 2025-03-08 - @0xnu
+New Features:
+* Implemented code quality rating system (A-E)
+  - Bugs: Measures code defects
+  - Code Smells: Identifies maintainability issues
+  - Coverage: Tracks test coverage percentage
+  - Duplications: Detects code duplication ratio
+  - Vulnerabilities: Assesses security risks
+
+Improvements:
+* Enhanced HTML report formatting
+  - Added consistent styling
+  - Improved readability
+  - Fixed footer display
+* General bug fixes and performance enhancements
+
 ## 1.0.6 - 2025-03-07 - @0xnu
 Refinements:
 * Code scanning improvements

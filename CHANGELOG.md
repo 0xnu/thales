@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.0.8 - 2025-03-08 - @0xnu
+Improvements:
+* Upgraded Rating System Algorithm
+  - Added impact multipliers for bug severity
+  - Implemented code structure analysis for smells detection
+  - Enhanced vulnerability scoring with data exposure penalties
+  - Improved coverage calculation for untested files
+
+* Enhanced PDF Report Generation
+  - Improved layout and typography
+
 ## 1.0.7 - 2025-03-08 - @0xnu
 New Features:
 * Implemented code quality rating system (A-E)

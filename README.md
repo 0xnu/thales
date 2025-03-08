@@ -156,10 +156,10 @@ This project is licensed under the BSD 3-Clause License - see the [LICENSE](LICE
   author       = {Oketunji, A.F.},
   title        = {Thales},
   year         = 2025,
-  version      = {1.0.7},
+  version      = {1.0.8},
   publisher    = {Finbarrs Oketunji},
-  doi          = {10.5281/zenodo.14993679},
-  url          = {https://doi.org/10.5281/zenodo.14993679}
+  doi          = {10.5281/zenodo.14994039},
+  url          = {https://doi.org/10.5281/zenodo.14994039}
 }
 ```
 
